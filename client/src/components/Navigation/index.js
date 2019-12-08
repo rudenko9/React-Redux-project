@@ -1,10 +1,15 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const Navigation = () => {
   return(
     <nav>
-      <li> Home of List and Events </li>
-      <li> Please create new event </li>
+      <li>
+      <Link to='/'> Home page </Link>
+      </li>
+      <li>
+      <Link to='/eventcreate'> Please create new event </Link>
+      </li>
      </nav>
   )
 }

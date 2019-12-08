@@ -9,4 +9,4 @@ const Eventinfo = () => {
   )
 };
 
-export default Navigation;
+export default Eventinfo;
