@@ -1,5 +1,8 @@
 import React from 'react';
 import {HashRouter, Switch, Route} from 'react-router-dom';
+import family  from './family.svg';
+import { Provider } from 'react-redux';
+import store from './redux-core/store';
 
 import './App.css';
 import Header from './components/Header';
@@ -11,11 +14,17 @@ import Home from './containers/Home';
 import CreateEvents from './containers/CreateEvents';
 import Eventinfo from './containers/Eventinfo';
 
+
+
+
+
 function App() {
   return (
     <HashRouter>
+    <Provider store={store}>
 
     <div className="App">
+    <img src={family} className='App-logo' alt='family' />
     <Header />
     <Navigation />
 
@@ -29,7 +38,8 @@ function App() {
 
 
     <Footer />
-    </div>,
+    </div>
+    </Provider>
     </HashRouter>
   );
 }
