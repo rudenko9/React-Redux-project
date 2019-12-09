@@ -54,7 +54,8 @@ const data = {
     <br/>
       <Typography variant='h5' color='secondary'> You can create event here </Typography>
 
-      <form noValidate autoComplete='off' className='App-create-form'>
+      <form noValidate autoComplete='off' className='App-column-center'>
+
         <TextField onChange={handleOnChange('name')} value={state.name}  label='Event name' variant='outlined' margin="normal" placeholder="Event name"/>
         <TextField onChange={handleOnChange('address')} value={state.address} label='Address'  variant='outlined' margin="normal" placeholder="address"/>
         <TextField onChange={handleOnChange('date_time')} value={state.date_time} label='Date_Time' variant='outlined' margin="normal" placeholder="Date & Time"/>

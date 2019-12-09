@@ -27,6 +27,7 @@ function App() {
     <img src={family} className='App-logo' alt='family' />
     <Header />
     <Navigation />
+    <br/>
 
     <Switch>
     <Route exact path='/' component={Home} />
