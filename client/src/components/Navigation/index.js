@@ -5,7 +5,7 @@ const Navigation = () => {
   return(
     <nav>
       <li>
-      <Link to='/'> Home page </Link>
+      <Link  to='/'> Home page </Link>
       </li>
       <li>
       <Link to='/eventcreate'> Please create new event </Link>

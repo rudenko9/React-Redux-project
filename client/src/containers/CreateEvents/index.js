@@ -4,6 +4,8 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import TextField from '@material-ui/core/TextField';
 
+
+
 const CreateEvents = () => {
 
   const [state, setState] = useState({
@@ -51,21 +53,23 @@ const data = {
 
   return(
     <main>
+
     <br/>
-      <Typography variant='h5' color='secondary'> You can create event here </Typography>
+      <Typography variant='h5' color='secondary'>Here you can any create event</Typography>
 
       <form noValidate autoComplete='off' className='App-column-center'>
 
-        <TextField onChange={handleOnChange('name')} value={state.name}  label='Event name' variant='outlined' margin="normal" placeholder="Event name"/>
-        <TextField onChange={handleOnChange('address')} value={state.address} label='Address'  variant='outlined' margin="normal" placeholder="address"/>
-        <TextField onChange={handleOnChange('date_time')} value={state.date_time} label='Date_Time' variant='outlined' margin="normal" placeholder="Date & Time"/>
-        <TextField onChange={handleOnChange('price')} value={state.price} label='Price' variant='outlined' margin="normal" placeholder="Price"/>
-        <TextField onChange={handleOnChange('image')} value={state.image} label='Image' variant='outlined' margin="normal" placeholder="image url"/>
-        <TextField onChange={handleOnChange('phone_number')} value={state.phone_number} label='Phone_Number' variant='outlined' margin="normal" placeholder="Phone Number"/>
+        <TextField onChange={handleOnChange('name')} value={state.name}  label='Event name' variant='outlined' margin="small" placeholder="Event name"/>
+        <TextField onChange={handleOnChange('address')} value={state.address} label='Address'  variant='outlined' margin="small" placeholder="address"/>
+        <TextField onChange={handleOnChange('date_time')} value={state.date_time} label='Date_Time' variant='outlined' margin="small" placeholder="Date & Time"/>
+        <TextField onChange={handleOnChange('price')} value={state.price} label='Price' variant='outlined' margin="small" placeholder="Price"/>
+        <TextField onChange={handleOnChange('image')} value={state.image} label='Image' variant='outlined' margin="small" placeholder="image url"/>
+        <TextField onChange={handleOnChange('phone_number')} value={state.phone_number} label='Phone_Number' variant='outlined' margin="small" placeholder="Phone Number"/>
 
       <Button color='default' variant='outlined' onClick={handleSave} > Save your event </Button>
 
        </form>
+
      </main>
   )
 }
