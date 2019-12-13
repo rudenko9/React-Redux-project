@@ -15,7 +15,7 @@ useEffect( () => {
     dispatch(getlistOfEvents());
 
   }
-},  [] // we add [] to ensure that containers renders once, component did mount
+},  [] // we add [] to ensure that containers renders once component did mount
 
 );
 
