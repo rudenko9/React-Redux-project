@@ -13,6 +13,8 @@ import Home from './containers/Home';
 
 import CreateEvents from './containers/CreateEvents';
 import Eventinfo from './containers/Eventinfo';
+import DeletePage from './containers/CleaningBin';
+
 
 
 
@@ -33,6 +35,7 @@ function App() {
     <Route exact path='/' component={Home} />
     <Route exact path='/eventdetails' component={Eventinfo} />
     <Route exact path='/eventcreate' component={CreateEvents} />
+    <Route exaxt path='/delete' component={DeletePage} />
     <Route component={Notfound}></Route>
 
     </Switch>

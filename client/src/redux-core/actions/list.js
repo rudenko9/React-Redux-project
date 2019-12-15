@@ -6,3 +6,13 @@ export const getlistOfEvents = () => {
   }
 );
 };
+
+
+export const addlistOfEvents = (newEvent) => {
+
+  return({
+    type: 'ADD_NEW_LIST',
+    payload: newEvent,
+  }
+);
+};

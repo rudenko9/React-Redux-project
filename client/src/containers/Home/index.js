@@ -14,10 +14,7 @@ const Home = () => {
   const listOfItems = useSelector(state => state.list);
 
 useEffect( () => {
-  if (!listOfItems.data.length){
-    dispatch(getlistOfEvents());
-
-  }
+  dispatch(getlistOfEvents());
 },  [] // we add [] to ensure that containers renders once component did mount
 
 );
