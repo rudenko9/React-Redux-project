@@ -36,10 +36,10 @@ const list = (state = initState, action) => {
 
     case 'DELETE_EVENT':
       //payload === itemID
-      const newList = state.list.data.filter((event) => event.id !== action.payload);
+      const newList = state.data.filter((event) => event.id !== action.payload);
 
       return ({
-        ...state, //payload === {...some info}
+        ...state, 
           data: newList,
       });
 

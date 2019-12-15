@@ -16,3 +16,13 @@ export const addlistOfEvents = (newEvent) => {
   }
 );
 };
+
+
+export const deleteEvent = (eventId) => {
+
+  return({
+    type: 'DELETE_EVENT',
+    payload: eventId,
+  }
+);
+};
