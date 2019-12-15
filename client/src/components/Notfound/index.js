@@ -1,3 +1,5 @@
+// stateless component
+
 import React from 'react';
 
 const Notfound = () => {

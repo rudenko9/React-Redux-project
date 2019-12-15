@@ -8,9 +8,11 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Navigation from './components/Navigation';
-import Notfound from './containers/Notfound';
+import Notfound from './components/Notfound';
 import Home from './containers/Home';
 import EventDescription from './components/EventDescription';
+import AboutPage from './components/AboutPage';
+
 
 import CreateEvents from './containers/CreateEvents';
 import DeletePage from './containers/CleaningBin';
@@ -35,7 +37,9 @@ function App() {
     <Route exact path='/' component={Home} />
     <Route exact path='/eventdescription/:id' component={EventDescription} />
     <Route exact path='/eventcreate' component={CreateEvents} />
-    <Route exaxt path='/delete' component={DeletePage} />
+    <Route exact path='/delete' component={DeletePage} />
+    <Route exact path='/about' component={AboutPage} />
+
     <Route component={Notfound}></Route>
 
     </Switch>

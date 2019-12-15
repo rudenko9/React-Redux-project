@@ -3,9 +3,9 @@ import {useParams} from 'react-router';
 import {useDispatch, useSelector} from 'react-redux';
 import {getlistOfEvents} from '../../redux-core/actions/list';
 
+
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
-
 import Container from '@material-ui/core/Container';
 
 
