@@ -31,8 +31,8 @@ history.push(`/eventdescription/${eventId}`);
 <Typography variant='h4' > List of favorite Events </Typography>
 <List className='App-column-center'>
 {listOfItems.data.map(event =>
-  <ListItem key={event.id} button onClick={handleOpenDetails(event.id)}>
-    <Typography align='center' style={{width: '100%'}}>{event.name}</Typography>
+  <ListItem key={event.id}  button onClick={handleOpenDetails(event.id)}>
+    <Typography align='center'  color='secondary' style={{width: '100%'}}>{event.name}</Typography>
   </ListItem>
 
  )}
