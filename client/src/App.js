@@ -10,9 +10,9 @@ import Footer from './components/Footer';
 import Navigation from './components/Navigation';
 import Notfound from './containers/Notfound';
 import Home from './containers/Home';
+import EventDescription from './components/EventDescription';
 
 import CreateEvents from './containers/CreateEvents';
-import Eventinfo from './containers/Eventinfo';
 import DeletePage from './containers/CleaningBin';
 
 
@@ -33,7 +33,7 @@ function App() {
 
     <Switch>
     <Route exact path='/' component={Home} />
-    <Route exact path='/eventdetails' component={Eventinfo} />
+    <Route exact path='/eventdescription/:id' component={EventDescription} />
     <Route exact path='/eventcreate' component={CreateEvents} />
     <Route exaxt path='/delete' component={DeletePage} />
     <Route component={Notfound}></Route>
