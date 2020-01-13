@@ -1,5 +1,6 @@
 #require 'pry'
 class EventsController < ApplicationController
+  skip_before_action :verify_authenticity_token
 
 def list
   @events = Event.all
@@ -25,7 +26,7 @@ end
 private
 
 def event_params
-params.require(:event).permit(:name, :address, :date_time, :price, :image, :phone_number)
+params.require(:event).permit(:name, :address, :date, :price, :image, :phone_number)
 end
 
 end

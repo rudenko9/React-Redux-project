@@ -1,4 +1,4 @@
 class EventSerializer < ActiveModel::Serializer
-  attributes :id, :name, :address, :date_time, :price, :image, :phone_number
+  attributes :id, :name, :address, :date , :price, :image, :phone_number
 
 end

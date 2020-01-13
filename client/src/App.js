@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import store from './redux-core/store';
 
 import './App.css';
+import Slogan from './components/Slogan'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Navigation from './components/Navigation';
@@ -29,6 +30,7 @@ function App() {
 
     <div className="App">
     <img src={family} className='App-logo' alt='family' />
+    <Slogan />
     <Header />
     <Navigation />
     <br/>
