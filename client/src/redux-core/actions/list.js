@@ -1,4 +1,3 @@
-//async action
 export const getlistOfEvents = () => {
 
   return({
