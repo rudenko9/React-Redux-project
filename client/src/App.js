@@ -15,41 +15,39 @@ import EventDescription from './components/EventDescription';
 import AboutPage from './components/AboutPage';
 
 
+
 import CreateEvents from './containers/CreateEvents';
 import DeletePage from './containers/CleaningBin';
 
 
 
-
-
-
 function App() {
+
+
   return (
     <HashRouter>
-    <Provider store={store}>
+      <Provider store={store}>
 
-    <div className="App">
-    <img src={family} className='App-logo' alt='family' />
-    <Slogan />
-    <Header />
-    <Navigation />
-    <br/>
+        <div className="App">
+          <img src={family} className='App-logo' alt='family' />
+          <Slogan />
+          <Header />
+          <Navigation />
+           <br/>
+            <Switch>
+             <Route exact path='/' component={Home} />
+             <Route exact path='/eventdescription/:id' component={EventDescription} />
+             <Route exact path='/eventcreate' component={CreateEvents} />
+             <Route exact path='/delete' component={DeletePage} />
+             <Route exact path='/about' component={AboutPage} />
 
-    <Switch>
-    <Route exact path='/' component={Home} />
-    <Route exact path='/eventdescription/:id' component={EventDescription} />
-    <Route exact path='/eventcreate' component={CreateEvents} />
-    <Route exact path='/delete' component={DeletePage} />
-    <Route exact path='/about' component={AboutPage} />
+             <Route component={Notfound}></Route>
 
-    <Route component={Notfound}></Route>
+            </Switch>
 
-    </Switch>
-
-
-    <Footer />
-    </div>
-    </Provider>
+          <Footer />
+        </div>
+      </Provider>
     </HashRouter>
   );
 }

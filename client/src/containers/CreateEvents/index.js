@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 
+import {useDispatch} from 'react-redux';
+import {addlistOfEvents} from '../../redux-core/actions/list';
+
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import TextField from '@material-ui/core/TextField';
-import {useDispatch} from 'react-redux';
-import {addlistOfEvents} from '../../redux-core/actions/list';
+
 
 const initState = {
   name: '',
@@ -16,42 +18,43 @@ const initState = {
 };
 
 const CreateEvents = () => {
+
   const dispatch = useDispatch();
 
   const [state, setState] = useState(initState);
 
 
-  const handleOnChange = (label) => (event) => {
+  const handleOnChange = (key) => (event) => {
     const value = event.target.value
-    if (value.length > 350) return;
-    setState(preState => ({...preState, [label]: value}))
+    //console.log('rr',  event.target.value)
+    if (value.length > 450) return;
+    setState(preState => ({...preState, [key]: value}))
   }
 
 const handleSave = () => {
-
-const data = {
-...state,
-}
+  console.log('A')
 
   const options = {
-         method: "POST",
-         body: JSON.stringify(state),
-         credentials: 'omit',
-         //setting the headers
-         headers:{
-         'Content-Type': 'application/json', Accept: "application/json"
-        },
-       };
+     method: "POST",
+     body: JSON.stringify(state),
+     credentials: 'omit',
+     //setting the headers
+     headers:{
+       'Content-Type': 'application/json', Accept: "application/json"
+     }
+  };
 
-       fetch(`http://localhost:3000/api/events/create`, options)
-       .then(res => res.json())
-       .then(res => {
-         dispatch(addlistOfEvents(res));
+  fetch(`http://localhost:3000/api/events/create`, options)
+     .then(res => res.json())
+     .then(res => {
+        console.log('B')
+        dispatch(addlistOfEvents(res));
         console.log( res);
         setState(initState);
         alert('Your event was successfully created!!!!');
      })
     .catch(console.error)
+  console.log('E')
 };
 
   return(

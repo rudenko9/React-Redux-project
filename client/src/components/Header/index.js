@@ -4,11 +4,12 @@ import React from 'react';
 
 
 const Header = () => {
+
   return(
     <header>
       <h1> Events </h1>
-     </header>
-  )
-}
+    </header>
+   )
+};
 
 export default Header;

@@ -28,7 +28,7 @@ const list = (state = initState, action) => {
   });
 
     case 'ADD_NEW_LIST':
-    return ({
+     return ({
       ...state, //payload === {...some info}
         data: [...state.data, action.payload],
 
@@ -39,9 +39,10 @@ const list = (state = initState, action) => {
       const newList = state.data.filter((event) => event.id !== action.payload);
 
       return ({
-        ...state, 
+        ...state,
           data: newList,
       });
+
 
   };
   return state;
